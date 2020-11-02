@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LOGIN PAGE</title>
+  </head>
+  <style>
+    h2 {
+      margin-top: 5%;
+      color: rgb(11, 47, 88);
+    }
+
+    body {
+      background: linear-gradient(to bottom, #c1b6f1 0%, #ff99cc 100%);
+      margin-top: 3%;
+      padding: 20px;
+    }
+
+    .name {
+      width: 100%;
+      padding: 50px;
+    }
+
+    h3 {
+      color: rgb(53, 5, 53);
+      font-size: xx-large;
+    }
+
+    table {
+      margin-left: 28%;
+      color: rgb(36, 12, 28);
+      background-color: #64bbdb;
+      background-image: url("https://www.transparenttextures.com/patterns/dark-brick-wall.png");
+      font-size: 16px;
+      padding: 50px;
+      border-radius: 10%;
+      border: thin;
+    }
+
+    td {
+      font-size: x-large;
+    }
+
+    .button {
+      background-color: #5c62c9;
+      background-image: url("https://www.transparenttextures.com/patterns/dark-brick-wall.png");
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      font-size: 16px;
+      border-radius: 50%;
+      border-color: rgb(72, 25, 126);
+    }
+
+    input {
+      width: 100%;
+      background-color: #fdfdfd;
+      color: rgb(54, 53, 53);
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #test {
+      margin-bottom: -2%;
+      margin-left: 40%;
+    }
+
+    #check{
+        font-size: xx-large;
+        margin-top: 300px;
+        
+    }
+  </style>
+
+  <body>
+    <h3 id="test"></h3>
+    <table align="center" cellspacing="20">
+      <td>
+        <h2>Login Page</h2>
+      </td>
+
+      <tr>
+        <td><b>Email</b></td>
+        <td>
+          <input type="email" id="email" name="name" placeholder="Email" />
+        </td>
+      </tr>
+      <br />
+      <tr>
+        <td><b>Password</b></td>
+        <td>
+          <input
+            type="password"
+            id="pass"
+            name="password"
+            placeholder="Password"
+          />
+        </td>
+      </tr>
+      <br />
+
+      <tr>
+        <td align="center" colspan="2">
+          <button class="button" onclick="myFunction()">Login</button>
+        </td>
+      </tr>
+    </table>
+  </body>
+  <script>
+    function myFunction() {
+      console.log(document.getElementById("email").value);
+      console.log(document.getElementById("pass").value);
+      if ((document.getElementById("email").value=='')||(document.getElementById("pass").value=='')){
+        var text = (document.getElementById("test").innerHTML = 'invalid input!!');
+        var text = (document.getElementById("test").style.color="red",marginLeft="50%");
+      }else if(
+        document.getElementById("email").value ==
+        document.getElementById("pass").value
+      ) {
+        var text = (document.getElementById("test").innerHTML =
+          "you have successfully logged in!!");
+          var text = (document.getElementById("test").style.marginLeft="33%");
+          
+            
+      } else {
+        var text = (document.getElementById("test").innerHTML =
+          "wrong credential!!");
+          var text = (document.getElementById("test").style.color="red");
+      }
+    }
+  </script>
+</html>
